@@ -1,0 +1,125 @@
+prefix: "&8[&b&lCoreChat&8] &r"
+
+general:
+  no-permission: "&cYou don't have permission to do that."
+  player-only: "&cThis command can only be used by a player."
+  player-not-found: "&cPlayer &f%player%&c not found."
+  invalid-usage: "&cInvalid usage. Use &f%usage%&c."
+  reloaded: "&aPlugin reloaded successfully."
+
+chat:
+  muted-global: "&cGlobal chat is currently muted."
+  muted-personal: "&cYou are muted and cannot chat. Time remaining: &f%time%&c."
+  cooldown: "&cWait &f%time%s&c before sending another message."
+  caps-replaced: "&eTake it easy with the caps."
+  flood-blocked: "&cDon't repeat the same message so quickly."
+  format-blocked: "&cYou don't have permission to use that format in chat."
+
+filter:
+  warned: "&c⚠ Watch your language. Warning &f%count%/%max%&c."
+  muted: "&cYou were muted for &f%duration%s&c for using inappropriate language."
+  replaced: "&7(Message filtered)"
+
+private-message:
+  no-reply: "&cYou have nobody to reply to."
+  self-message: "&cYou cannot message yourself."
+  ignored: "&cThat player has you ignored."
+  ignoring: "&cYou are ignoring that player."
+  offline: "&cThat player is not online."
+
+mute:
+  muted: "&aPlayer &f%player%&a muted for &f%duration%&a."
+  unmuted: "&aPlayer &f%player%&a unmuted."
+  already-muted: "&cThat player is already muted."
+  not-muted: "&cThat player is not muted."
+  global-muted: "&aGlobal chat muted."
+  global-unmuted: "&aGlobal chat unmuted."
+  notify-muted: "&cYou were muted for &f%duration%&c. Reason: &f%reason%&c."
+  notify-unmuted: "&aYou have been unmuted."
+
+clearchat:
+  cleared: "&aChat cleared by &f%player%&a."
+  broadcast: "&7Chat was cleared."
+
+channel:
+  switched: "&aSwitched to channel &f%channel%&a."
+  no-permission: "&cYou don't have permission to join that channel."
+  not-found: "&cChannel not found."
+  list-header: "&8&m              &r &b&lChannels &8&m              "
+  list-entry: "&7%symbol% &f%name% &8— &7%description%"
+  list-footer: "&8&m                                    "
+
+socialspy:
+  enabled: "&aSocialSpy enabled."
+  disabled: "&cSocialSpy disabled."
+
+staffchat:
+  enabled: "&aStaff chat enabled."
+  disabled: "&7Staff chat disabled."
+
+ignore:
+  added: "&aYou are now ignoring &f%player%&a."
+  removed: "&aYou are no longer ignoring &f%player%&a."
+  already: "&cYou are already ignoring that player."
+  not-ignoring: "&cYou are not ignoring that player."
+  self: "&cYou cannot ignore yourself."
+  list-header: "&8&m              &r &c&lIgnoring &8&m              "
+  list-entry: "&7- &f%player%"
+  list-empty: "&7You are not ignoring anyone."
+
+broadcast:
+  format: "\n&8&m          &r &f%message% &8&m          &r\n"
+
+help:
+  header: "&8&m              &r &b&lCoreChat &8&m              "
+  footer: "&8&m                                    "
+  entries:
+    - "&b/cc reload &8- &7Reload configuration"
+    - "&b/cc info &8- &7Plugin info"
+    - "&b/msg <player> <message> &8- &7Private message"
+    - "&b/r <message> &8- &7Reply to message"
+    - "&b/bc <message> &8- &7Broadcast"
+    - "&b/mute <player> [time] &8- &7Mute player"
+    - "&b/unmute <player> &8- &7Unmute player"
+    - "&b/mutechat &8- &7Toggle global chat mute"
+    - "&b/clearchat &8- &7Clear chat"
+    - "&b/channel <channel> &8- &7Switch channel"
+    - "&b/socialspy &8- &7Toggle socialspy"
+    - "&b/sc &8- &7Toggle staff chat"
+    - "&b/ignore <player> &8- &7Ignore player"
+
+afk:
+  now-afk: "&7%player% is now AFK."
+  no-longer-afk: "&7%player% is no longer AFK."
+  you-are-afk: "&7You are now AFK. Move to return."
+  message-afk: "&7%player% is currently AFK."
+  command-set: "&aYou are now AFK."
+  command-unset: "&aYou are no longer AFK."
+
+spam:
+  blocked: "&cSlow down before sending more messages."
+  muted: "&cYou were muted for &f%duration%s&c for spamming."
+
+advertising:
+  blocked: "&cYou cannot advertise other servers here."
+  warned: "&c⚠ Do not post links or IPs from other servers."
+
+chat-games:
+  math-announce: "&6&l[ChatGame] &eSolve: &f%question% &e— First to answer wins &a$%reward%&e!"
+  math-win: "&a&l[ChatGame] &f%player% &aanswered &f%answer% &acorrectly and won &a$%reward%&a!"
+  math-timeout: "&c&l[ChatGame] &fNobody answered. The answer was: &e%answer%"
+  unscramble-announce: "&b&l[ChatGame] &eUnscramble: &f%word% &e— First to answer wins &a$%reward%&e!"
+  unscramble-win: "&a&l[ChatGame] &f%player% &aunscrambled &f%answer% &acorrectly and won &a$%reward%&a!"
+  unscramble-timeout: "&c&l[ChatGame] &fNobody unscrambled it. The word was: &e%answer%"
+
+me:
+  format: "&7* &f%player% %message%"
+
+join-quit:
+  join: "&8[&a+&8] &7%prefix%%player% &ajoined the server."
+  first-join: "&8[&a+&8] &e✦ &7%player% &ajoined for the first time. &eWelcome!"
+  quit: "&8[&c-&8] &7%prefix%%player% &cleft the server."
+
+clearchat:
+  cleared-by: "&7Chat was cleared by &f%player%&7."
+  cleared: "&7Chat was cleared."

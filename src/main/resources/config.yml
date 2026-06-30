@@ -1,0 +1,509 @@
+# ╔═══════════════════════════════════════════════════════════════╗
+# ║                        CoreChat v1.0.0                       ║
+# ║                   by YesithX — All Rights Reserved           ║
+# ╚═══════════════════════════════════════════════════════════════╝
+
+# Language file to use. Options: es, en
+language: "es"
+
+# ─────────────────────────────────────────────
+#  FORMAT SETTINGS
+# ─────────────────────────────────────────────
+format:
+  # Allow players with corechat.minimessage permission to use MiniMessage tags
+  allow-minimessage: true
+  # Allow players with corechat.legacy permission to use legacy & color codes
+  allow-legacy-colors: true
+  # These MiniMessage tags will be stripped even from players with permission
+  blocked-minimessage-tags:
+    - "click"
+    - "hover"
+    - "insertion"
+    - "font"
+    - "keybind"
+    - "translate"
+    - "score"
+    - "selector"
+    - "nbt"
+  # Parse PlaceholderAPI placeholders in chat messages
+  parse-placeholderapi: true
+  # Strip all formatting from players without any format permission
+  strip-all-for-unpermissioned: true
+  # Allow clickable URLs in chat
+  allow-urls: false
+  # URL permission — only players with this permission can send URLs
+  url-permission: "corechat.url"
+  # URL format wrapping — %url% is replaced with the actual URL
+  url-format: "&b&n%url%"
+  # Regex pattern used to detect URLs
+  url-regex: "(https?://[\\w\\-._~:/?#\\[\\]@!$&'()*+,;=%]+)"
+
+# ─────────────────────────────────────────────
+#  CHAT FORMAT
+# ─────────────────────────────────────────────
+chat:
+  # Main chat format. Available placeholders:
+  # %prefix% %suffix% %player% %displayname% %message% %world%
+  # %luckperms_prefix% %luckperms_suffix% {luckperms_group}
+  # {vault_prefix} {vault_suffix}
+  format: "%luckperms_prefix%&7%player%%luckperms_suffix% &8» &f%message%"
+  # Format printed to console
+  console-format: "[CHAT] [%world%] %player%: %message%"
+  # Show LuckPerms prefix/suffix
+  show-luckperms-prefix: true
+  show-luckperms-suffix: true
+  # Show Vault prefix/suffix as fallback
+  show-vault-prefix: true
+  show-vault-suffix: true
+  # Format used when player has no prefix
+  no-prefix-format: "&7%player% &8» &f%message%"
+  # Show player world in chat
+  show-world: false
+  world-format: "&8[&7%world%&8] "
+  # Prevent players in different worlds from seeing each other's chat
+  per-world-chat: false
+  # Worlds that share chat regardless of per-world-chat setting
+  shared-worlds:
+    - "world"
+    - "world_nether"
+    - "world_the_end"
+
+# ─────────────────────────────────────────────
+#  CHANNELS
+# ─────────────────────────────────────────────
+channels:
+  default: global
+  global:
+    enabled: true
+    symbol: "G"
+    color: "&a"
+    prefix: "&8[&aGlobal&8]"
+    format: "%prefix% &7%player%&8: &f%message%"
+    range: -1
+    permission: ""
+    log: true
+    cooldown-override: -1
+  local:
+    enabled: true
+    symbol: "L"
+    color: "&e"
+    prefix: "&8[&eLocal&8]"
+    format: "%prefix% &7%player%&8: &f%message%"
+    range: 150
+    permission: ""
+    log: true
+    cooldown-override: -1
+  staff:
+    enabled: true
+    symbol: "S"
+    color: "&c"
+    prefix: "&8[&c&lStaff&8]"
+    format: "%prefix% &c%player%&8: &7%message%"
+    range: -1
+    permission: "corechat.staffchat"
+    log: true
+    cooldown-override: -1
+  trade:
+    enabled: true
+    symbol: "T"
+    color: "&6"
+    prefix: "&8[&6Trade&8]"
+    format: "%prefix% &6%player%&8: &e%message%"
+    range: -1
+    permission: ""
+    log: true
+    cooldown-override: 10
+  admin:
+    enabled: true
+    symbol: "A"
+    color: "&4"
+    prefix: "&8[&4Admin&8]"
+    format: "%prefix% &4%player%&8: &c%message%"
+    range: -1
+    permission: "corechat.adminchat"
+    log: true
+    cooldown-override: -1
+  help:
+    enabled: true
+    symbol: "H"
+    color: "&b"
+    prefix: "&8[&b?&8]"
+    format: "%prefix% &b%player%&8: &f%message%"
+    range: -1
+    permission: ""
+    log: true
+    cooldown-override: 30
+
+# ─────────────────────────────────────────────
+#  PRIVATE MESSAGES
+# ─────────────────────────────────────────────
+private-message:
+  enabled: true
+  format-sender: "&8[&7Tú &8➜ &f%target%&8] &f%message%"
+  format-receiver: "&8[&f%sender% &8➜ &7Tí&8] &f%message%"
+  format-socialspy: "&8[&dSpy &8| &7%sender% &8➜ &7%target%&8] &f%message%"
+  format-consolespy: "[SPY] %sender% -> %target%: %message%"
+  sound-enabled: true
+  sound: "ENTITY_EXPERIENCE_ORB_PICKUP"
+  sound-volume: 1.0
+  sound-pitch: 1.0
+  # Notify sender if receiver is AFK
+  notify-afk: true
+  # Allow messaging across servers (requires BungeeCord/Velocity plugin)
+  cross-server: false
+  # Block private messages from players in vanish
+  block-vanished: true
+  # Log private messages to console
+  log-to-console: true
+  # Max length of a private message
+  max-length: 200
+
+# ─────────────────────────────────────────────
+#  BROADCAST
+# ─────────────────────────────────────────────
+broadcast:
+  format: "\n&8&m          &r &f%message% &8&m          &r\n"
+  prefix: "&c&l[!] &r"
+  sound-enabled: true
+  sound: "ENTITY_PLAYER_LEVELUP"
+  sound-volume: 1.0
+  sound-pitch: 1.0
+  title-enabled: false
+  title: "&c&l[!] Anuncio"
+  subtitle: "&f%message%"
+  title-fadein: 10
+  title-stay: 60
+  title-fadeout: 20
+  # Log broadcasts to console
+  log-to-console: true
+  # Allow MiniMessage in broadcast (for admins)
+  allow-minimessage: true
+
+# ─────────────────────────────────────────────
+#  COOLDOWN
+# ─────────────────────────────────────────────
+cooldown:
+  enabled: true
+  seconds: 3
+  bypass-permission: "corechat.bypass.cooldown"
+  # Different cooldowns per group (LuckPerms group name: seconds)
+  per-group:
+    default: 3
+    vip: 1
+    staff: 0
+
+# ─────────────────────────────────────────────
+#  ANTI CAPS
+# ─────────────────────────────────────────────
+caps:
+  enabled: true
+  # Minimum message length before checking caps
+  min-length: 6
+  # Max percentage of uppercase letters allowed
+  max-percent: 50
+  # What to do: replace (lowercase) or block
+  action: "replace"
+  bypass-permission: "corechat.bypass.caps"
+  # Notify player when caps are detected
+  notify: true
+
+# ─────────────────────────────────────────────
+#  ANTI FLOOD
+# ─────────────────────────────────────────────
+flood:
+  enabled: true
+  # Minimum similarity percentage to consider a message as flood (0-100)
+  min-similarity: 85
+  # What to do: replace or block
+  action: "block"
+  bypass-permission: "corechat.bypass.flood"
+  # Notify player when flood is detected
+  notify: true
+
+# ─────────────────────────────────────────────
+#  ANTI SPAM
+# ─────────────────────────────────────────────
+spam:
+  enabled: true
+  # Max messages in the time window before flagging as spam
+  max-messages: 5
+  # Time window in seconds
+  time-window: 5
+  # What to do: warn, block, mute
+  action: "block"
+  mute-duration: 60
+  bypass-permission: "corechat.bypass.spam"
+
+# ─────────────────────────────────────────────
+#  ANTI ADVERTISING
+# ─────────────────────────────────────────────
+advertising:
+  enabled: true
+  # What to do: block, replace, warn
+  action: "block"
+  bypass-permission: "corechat.bypass.advertising"
+  # Whitelisted domains that are allowed
+  whitelist:
+    - "colombiacraft.fun"
+    - "tienda.colombiacraft.fun"
+    - "discord.colombiacraft.fun"
+  # Custom patterns to detect IP addresses and domains
+  patterns:
+    - "\\b\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\b"
+    - "\\b[a-zA-Z0-9.-]+\\.(com|net|org|gg|io|fun|xyz|me)\\b"
+
+# ─────────────────────────────────────────────
+#  ANTI SWEAR / FILTER
+# ─────────────────────────────────────────────
+filter:
+  enabled: true
+  bypass-permission: "corechat.bypass.filter"
+  # What to do when a bad word is detected: replace, block, warn+mute
+  action: "replace"
+  # Character used to replace bad words
+  replace-char: "*"
+  # Warn the player when filter is triggered
+  warn-player: true
+  # Number of warnings before auto-mute
+  warn-threshold: 3
+  # Reset warning count after this many seconds (0 = never)
+  warn-reset-seconds: 3600
+  # Auto-mute when threshold is reached
+  mute-on-threshold: true
+  mute-duration-seconds: 300
+  # Also check private messages
+  filter-private-messages: true
+  # Log filtered messages to console
+  log-filtered: true
+  # List of blocked words (case-insensitive)
+  words:
+    - "mierda"
+    - "puta"
+    - "hijueputa"
+    - "gonorrea"
+    - "malparido"
+    - "hp"
+    - "fuck"
+    - "shit"
+    - "bitch"
+    - "asshole"
+    - "bastard"
+    - "cunt"
+    - "whore"
+    - "nigga"
+    - "retard"
+  # Regex patterns (case-insensitive)
+  regex:
+    - "m+[i1]+[e3]+r+d+[a4]+"
+    - "p+[u]+t+[a4]+"
+    - "f+[u]+c+k+"
+    - "s+h+[i1]+t+"
+    - "b+[i1]+t+c+h+"
+
+# ─────────────────────────────────────────────
+#  MUTE
+# ─────────────────────────────────────────────
+mute:
+  # Storage type: file or mysql
+  storage: "file"
+  # Default mute duration in seconds when no duration is specified
+  default-duration-seconds: 300
+  # Broadcast mute to all players
+  broadcast-mute: false
+  # Broadcast mute format
+  broadcast-format: "&c%player% fue muteado por %duration%s."
+  # Allow muted players to use private messages
+  allow-private-messages: false
+  # Allow muted players to use commands
+  allowed-commands:
+    - "/help"
+    - "/spawn"
+
+# ─────────────────────────────────────────────
+#  CLEAR CHAT
+# ─────────────────────────────────────────────
+clearchat:
+  lines: 150
+  # Notify all players when chat is cleared
+  broadcast: true
+  # Show who cleared the chat
+  show-clearer: true
+
+# ─────────────────────────────────────────────
+#  MENTION SYSTEM
+# ─────────────────────────────────────────────
+mention:
+  enabled: true
+  symbol: "@"
+  sound: "ENTITY_EXPERIENCE_ORB_PICKUP"
+  sound-volume: 0.8
+  sound-pitch: 1.2
+  # Format used to highlight the mention in chat
+  format: "&e&l@%player%"
+  permission: "corechat.mention"
+  # Permission required to receive mentions
+  receive-permission: ""
+  # Cooldown between mentions targeting the same player (seconds)
+  cooldown: 10
+  # Allow mentioning @everyone (mentions all online players)
+  allow-everyone: false
+  everyone-permission: "corechat.mention.everyone"
+
+# ─────────────────────────────────────────────
+#  STAFF CHAT
+# ─────────────────────────────────────────────
+staff-chat:
+  # Automatically enable staff chat on join for staff players
+  toggle-on-join: false
+  # Format for staff chat (separate from channel format)
+  format: "&8[&c&lSTAFF&8] &c%prefix%%player%&8: &7%message%"
+  sound-enabled: true
+  sound: "BLOCK_NOTE_BLOCK_PLING"
+
+# ─────────────────────────────────────────────
+#  SOCIAL SPY
+# ─────────────────────────────────────────────
+socialspy:
+  # Persist socialspy state across restarts
+  persist: false
+  # Also spy on channel messages (not just private messages)
+  spy-channels: false
+
+# ─────────────────────────────────────────────
+#  IGNORE SYSTEM
+# ─────────────────────────────────────────────
+ignore:
+  # Block private messages from ignored players
+  block-private-messages: true
+  # Block public chat messages from ignored players
+  block-chat-messages: true
+  # Max players a single player can ignore
+  max-ignored: 50
+  # Persist ignore list across restarts
+  persist: true
+
+# ─────────────────────────────────────────────
+#  AFK SYSTEM
+# ─────────────────────────────────────────────
+afk:
+  enabled: true
+  # Seconds of inactivity before marking player as AFK
+  timeout-seconds: 300
+  # Format added to player name when AFK
+  name-format: "&7[AFK] %name%"
+  # Broadcast when player goes AFK
+  broadcast-on-afk: true
+  broadcast-format: "&7%player% está AFK."
+  broadcast-return-format: "&7%player% ya no está AFK."
+  # Kick AFK players after X seconds (0 = disabled)
+  kick-after-seconds: 0
+  kick-reason: "Fuiste expulsado por inactividad."
+  bypass-permission: "corechat.bypass.afk"
+
+# ─────────────────────────────────────────────
+#  CHAT GAMES
+# ─────────────────────────────────────────────
+chat-games:
+  enabled: false
+  # Math question in chat every X minutes
+  math:
+    enabled: false
+    interval-minutes: 15
+    reward-money: 100.0
+    format: "&6&l[ChatGame] &eResuelve: &f%question%"
+    answer-format: "&a&l[ChatGame] &f%player% &arespondió correctamente y ganó &f$%reward%&a!"
+    timeout-seconds: 30
+  # Unscramble word game
+  unscramble:
+    enabled: false
+    interval-minutes: 20
+    reward-money: 150.0
+    words:
+      - "minecraft"
+      - "colombia"
+      - "servidor"
+      - "diamond"
+      - "creeper"
+
+# ─────────────────────────────────────────────
+#  CHAT LOG
+# ─────────────────────────────────────────────
+log:
+  enabled: true
+  # Log to file
+  log-to-file: true
+  file-name: "chat-log.txt"
+  # Date format for log entries
+  date-format: "yyyy-MM-dd HH:mm:ss"
+  # Log format
+  format: "[{date}] [%world%] %player%: %message%"
+  # Also log filtered/blocked messages
+  log-blocked: true
+  log-private: true
+
+# ─────────────────────────────────────────────
+#  JOIN / QUIT MESSAGES
+# ─────────────────────────────────────────────
+join-quit:
+  enabled: true
+  join:
+    enabled: true
+    format: "&8[&a+&8] &7%prefix%%player% &ase unió al servidor."
+    first-join-format: "&8[&a+&8] &7%player% &aentró por primera vez. &e¡Bienvenido parce!"
+    broadcast: true
+    sound: "ENTITY_PLAYER_LEVELUP"
+    sound-enabled: true
+    title-enabled: false
+    title: "&a¡Bienvenido!"
+    subtitle: "&fBienvenido a &bColombiaCraft&f, %player%."
+  quit:
+    enabled: true
+    format: "&8[&c-&8] &7%prefix%%player% &cse fue del servidor."
+    broadcast: true
+
+# ─────────────────────────────────────────────
+#  CHAT COLORS (per-group overrides)
+# ─────────────────────────────────────────────
+chat-colors:
+  enabled: true
+  # Grant these color permissions automatically by LuckPerms group
+  group-colors:
+    default: ""
+    vip: "corechat.legacy"
+    premium: "corechat.minimessage"
+    staff: "corechat.minimessage"
+    admin: "corechat.minimessage"
+
+# ─────────────────────────────────────────────
+#  MESSAGE EDIT / DELETE
+# ─────────────────────────────────────────────
+message-edit:
+  # Allow staff to delete last N messages from chat (visual clear)
+  enabled: false
+  permission: "corechat.deletemessage"
+
+# ─────────────────────────────────────────────
+#  MYSQL (for mute/data persistence)
+# ─────────────────────────────────────────────
+mysql:
+  enabled: false
+  host: "localhost"
+  port: 3306
+  database: "corechat"
+  username: "root"
+  password: "password"
+  pool-size: 5
+  connection-timeout: 30000
+  table-prefix: "cc_"
+
+# ─────────────────────────────────────────────
+#  COMMAND SETTINGS
+# ─────────────────────────────────────────────
+commands:
+  # Disable default Bukkit /me command and replace with CoreChat version
+  override-me: true
+  me-format: "&7* &f%player% %message%"
+  me-permission: "corechat.me"
+  # /list command override
+  override-list: false
+  list-format: "&7Jugadores en línea &8(%count%)&7: &f{players}"

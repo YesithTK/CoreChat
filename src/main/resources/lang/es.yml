@@ -1,0 +1,125 @@
+prefix: "&8[&b&lCoreChat&8] &r"
+
+general:
+  no-permission: "&cNo tienes permiso pa hacer eso, parce."
+  player-only: "&cEste comando solo lo puede usar un jugador."
+  player-not-found: "&cNo se encontró el jugador &f%player%&c."
+  invalid-usage: "&cUso incorrecto. Usa &f%usage%&c."
+  reloaded: "&aPlugin recargado correctamente."
+
+chat:
+  muted-global: "&cEl chat global está silenciado ahora mismo."
+  muted-personal: "&cEstás muteado y no puedes chatear. Te quedan &f%time%&c."
+  cooldown: "&cEspera &f%time%s&c antes de volver a escribir."
+  caps-replaced: "&eOye, tranquilo con las mayúsculas parce."
+  flood-blocked: "&cNo repitas el mismo mensaje tan rápido."
+  format-blocked: "&cNo tienes permiso pa usar ese formato en el chat."
+
+filter:
+  warned: "&c⚠ Cuidado con el lenguaje, parce. Advertencia &f%count%/%max%&c."
+  muted: "&cFuiste muteado &f%duration%s&c por usar lenguaje inapropiado."
+  replaced: "&7(Mensaje filtrado)"
+
+private-message:
+  no-reply: "&cNo tienes nadie a quien responderle."
+  self-message: "&cNo te puedes escribir a ti mismo, parce."
+  ignored: "&cEse jugador te tiene ignorado."
+  ignoring: "&cEstás ignorando a ese jugador."
+  offline: "&cEse jugador no está en línea."
+
+mute:
+  muted: "&aEl jugador &f%player%&a fue muteado por &f%duration%&a."
+  unmuted: "&aEl jugador &f%player%&a fue desmuteado."
+  already-muted: "&cEse jugador ya está muteado."
+  not-muted: "&cEse jugador no está muteado."
+  global-muted: "&aEl chat global fue silenciado."
+  global-unmuted: "&aEl chat global fue reactivado."
+  notify-muted: "&cFuiste muteado por &f%duration%&c. Razón: &f%reason%&c."
+  notify-unmuted: "&aFuiste desmuteado."
+
+clearchat:
+  cleared: "&aEl chat fue limpiado por &f%player%&a."
+  broadcast: "&7El chat fue limpiado."
+
+channel:
+  switched: "&aCambiaste al canal &f%channel%&a."
+  no-permission: "&cNo tienes permiso pa entrar a ese canal."
+  not-found: "&cEse canal no existe."
+  list-header: "&8&m              &r &b&lCanales &8&m              "
+  list-entry: "&7%symbol% &f%name% &8— &7%description%"
+  list-footer: "&8&m                                    "
+
+socialspy:
+  enabled: "&aSocialSpy activado."
+  disabled: "&cSocialSpy desactivado."
+
+staffchat:
+  enabled: "&aStaff chat activado."
+  disabled: "&7Staff chat desactivado."
+
+ignore:
+  added: "&aAhora ignoras a &f%player%&a."
+  removed: "&aYa no ignoras a &f%player%&a."
+  already: "&cYa estás ignorando a ese jugador."
+  not-ignoring: "&cNo estás ignorando a ese jugador."
+  self: "&cNo te puedes ignorar a ti mismo."
+  list-header: "&8&m              &r &c&lIgnorando &8&m              "
+  list-entry: "&7- &f%player%"
+  list-empty: "&7No estás ignorando a nadie."
+
+broadcast:
+  format: "\n&8&m          &r &f%message% &8&m          &r\n"
+
+help:
+  header: "&8&m              &r &b&lCoreChat &8&m              "
+  footer: "&8&m                                    "
+  entries:
+    - "&b/cc reload &8- &7Recargar configuración"
+    - "&b/cc info &8- &7Info del plugin"
+    - "&b/msg <jugador> <mensaje> &8- &7Mensaje privado"
+    - "&b/r <mensaje> &8- &7Responder mensaje"
+    - "&b/bc <mensaje> &8- &7Broadcast"
+    - "&b/mute <jugador> [tiempo] &8- &7Mutear jugador"
+    - "&b/unmute <jugador> &8- &7 Desmutear jugador"
+    - "&b/mutechat &8- &7Silenciar chat global"
+    - "&b/clearchat &8- &7Limpiar chat"
+    - "&b/channel <canal> &8- &7Cambiar canal"
+    - "&b/socialspy &8- &7Activar/desactivar socialspy"
+    - "&b/sc &8- &7Activar/desactivar staff chat"
+    - "&b/ignore <jugador> &8- &7Ignorar jugador"
+
+afk:
+  now-afk: "&7%player% está AFK."
+  no-longer-afk: "&7%player% ya no está AFK."
+  you-are-afk: "&7Ahora estás AFK. Muévete para volver."
+  message-afk: "&7%player% está AFK ahora mismo."
+  command-set: "&aAhora estás AFK."
+  command-unset: "&aYa no estás AFK."
+
+spam:
+  blocked: "&cEspera un momento antes de enviar más mensajes."
+  muted: "&cFuiste muteado &f%duration%s&c por spam."
+
+advertising:
+  blocked: "&cNo puedes publicitar otros servidores aquí, parce."
+  warned: "&c⚠ No publiques links o IPs de otros servidores."
+
+chat-games:
+  math-announce: "&6&l[ChatGame] &eResuelve: &f%question% &e— Primer@ en responder gana &a$%reward%&e!"
+  math-win: "&a&l[ChatGame] &f%player% &arespondió &f%answer% &acorrectamente y ganó &a$%reward%&a!"
+  math-timeout: "&c&l[ChatGame] &fNadie respondió. La respuesta era: &e%answer%"
+  unscramble-announce: "&b&l[ChatGame] &eDescifra esta palabra: &f%word% &e— Primer@ en responder gana &a$%reward%&e!"
+  unscramble-win: "&a&l[ChatGame] &f%player% &adescifró &f%answer% &acorrectamente y ganó &a$%reward%&a!"
+  unscramble-timeout: "&c&l[ChatGame] &fNadie descifró la palabra. Era: &e%answer%"
+
+me:
+  format: "&7* &f%player% %message%"
+
+join-quit:
+  join: "&8[&a+&8] &7%prefix%%player% &ase unió al servidor."
+  first-join: "&8[&a+&8] &e✦ &7%player% &aentró por primera vez. &e¡Bienvenid@ parce!"
+  quit: "&8[&c-&8] &7%prefix%%player% &cse fue del servidor."
+
+clearchat:
+  cleared-by: "&7El chat fue limpiado por &f%player%&7."
+  cleared: "&7El chat fue limpiado."

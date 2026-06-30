@@ -1,0 +1,15 @@
+/storage/emulated/0/Download/CoreChat/src/main/java/com/yesithx/corechat/config/ConfigManager.java
+/storage/emulated/0/Download/CoreChat/src/main/java/com/yesithx/corechat/CoreChat.java
+/storage/emulated/0/Download/CoreChat/src/main/java/com/yesithx/corechat/lang/LangManager.java
+/storage/emulated/0/Download/CoreChat/src/main/java/com/yesithx/corechat/filter/ChatFilter.java
+/storage/emulated/0/Download/CoreChat/src/main/java/com/yesithx/corechat/games/ChatGamesManager.java
+/storage/emulated/0/Download/CoreChat/src/main/java/com/yesithx/corechat/listener/ChatListener.java
+/storage/emulated/0/Download/CoreChat/src/main/java/com/yesithx/corechat/command/CommandRegistry.java
+/storage/emulated/0/Download/CoreChat/src/main/java/com/yesithx/corechat/afk/AfkManager.java
+/storage/emulated/0/Download/CoreChat/src/main/java/com/yesithx/corechat/joinguit/JoinQuitListener.java
+/storage/emulated/0/Download/CoreChat/src/main/java/com/yesithx/corechat/manager/PrefixManager.java
+/storage/emulated/0/Download/CoreChat/src/main/java/com/yesithx/corechat/log/ChatLogger.java
+/storage/emulated/0/Download/CoreChat/src/main/java/com/yesithx/corechat/manager/PlayerDataManager.java
+/storage/emulated/0/Download/CoreChat/src/main/java/com/yesithx/corechat/format/FormatProcessor.java
+/storage/emulated/0/Download/CoreChat/src/main/java/com/yesithx/corechat/advertising/AntiAdvertising.java
+/storage/emulated/0/Download/CoreChat/src/main/java/com/yesithx/corechat/spam/AntiSpam.java

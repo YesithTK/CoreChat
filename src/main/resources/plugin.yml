@@ -1,0 +1,92 @@
+name: CoreChat
+version: '${project.version}'
+main: com.yesithx.corechat.CoreChat
+api-version: '1.21'
+author: YesithX
+description: Modern chat plugin with channels, filters, private messages and full MiniMessage support.
+softdepend:
+  - Vault
+  - LuckPerms
+  - PlaceholderAPI
+
+commands:
+  corechat:
+    description: CoreChat admin command.
+    aliases: [cc, cchat]
+    permission: corechat.admin
+  msg:
+    description: Send a private message.
+    aliases: [tell, w, pm, dm]
+    permission: corechat.msg
+  reply:
+    description: Reply to last private message.
+    aliases: [r]
+    permission: corechat.msg
+  broadcast:
+    description: Broadcast a server message.
+    aliases: [bc, alert]
+    permission: corechat.broadcast
+  mute:
+    description: Mute a player.
+    permission: corechat.mute
+  unmute:
+    description: Unmute a player.
+    permission: corechat.mute
+  mutechat:
+    description: Toggle global chat mute.
+    aliases: [gmute]
+    permission: corechat.mutechat
+  clearchat:
+    description: Clear the chat.
+    aliases: [cc2]
+    permission: corechat.clearchat
+  channel:
+    description: Switch or manage chat channels.
+    aliases: [ch]
+    permission: corechat.channel
+  socialspy:
+    description: Toggle socialspy for private messages.
+    permission: corechat.socialspy
+  staffchat:
+    description: Toggle staff chat.
+    aliases: [sc, schat]
+    permission: corechat.staffchat
+  ignore:
+    description: Ignore a player's messages.
+    permission: corechat.ignore
+
+permissions:
+  corechat.admin:
+    default: op
+  corechat.msg:
+    default: true
+  corechat.broadcast:
+    default: op
+  corechat.mute:
+    default: op
+  corechat.mutechat:
+    default: op
+  corechat.clearchat:
+    default: op
+  corechat.channel:
+    default: true
+  corechat.socialspy:
+    default: op
+  corechat.staffchat:
+    default: op
+  corechat.ignore:
+    default: true
+  corechat.color:
+    default: false
+  corechat.minimessage:
+    default: false
+  corechat.legacy:
+    default: false
+  corechat.bypass.filter:
+    default: op
+  corechat.bypass.cooldown:
+    default: op
+  corechat.bypass.caps:
+    default: op
+  corechat.bypass.flood:
+    default: op
